@@ -1,0 +1,23 @@
+<h1>Ride</h1>
+Airport: <%= @ride.airport %>
+Flight Date: <%= @ride.flight_date %> 
+Flight Time: <%= @ride.flight_time %>
+Ride Time <%= @ride.shuttle_time %>
+
+ <%= link_to "delete", @ride, :method => :delete,
+                                       :confirm => "You sure?" %>
+
+<% if current_user %>
+<%= link_to "Join this ride", join_ride_path, :method=> :post unless @ride.users.exists?(current_user.id)%>
+<% else %>
+You must first login before joining this ride
+<% end %>
+
+<h1>Members</h1>
+<% @ride.users.each do |user| %>
+	<img src="<%= user.fbimage %>">
+<% end %>
+
+<div>
+	<div class="fb-comments" data-href="http://rideshare.com/rides" data-numposts="5" data-colorscheme="light"></div>
+</div>

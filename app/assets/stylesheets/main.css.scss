@@ -1,0 +1,55 @@
+@import "bootstrap";
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.btn-info { 
+  color: #ffffff; 
+  background-color: #0088CC; 
+  border-color: #0088CC; 
+} 
+ 
+.btn-info:hover, 
+.btn-info:focus, 
+.btn-info:active, 
+.btn-info.active, 
+.open .dropdown-toggle.btn-info { 
+  color: #ffffff; 
+  background-color: #0099E6; 
+  border-color: #0088CC; 
+} 
+ 
+.btn-info:active, 
+.btn-info.active, 
+.open .dropdown-toggle.btn-info { 
+  background-image: none; 
+} 
+ 
+.btn-info.disabled, 
+.btn-info[disabled], 
+fieldset[disabled] .btn-info, 
+.btn-info.disabled:hover, 
+.btn-info[disabled]:hover, 
+fieldset[disabled] .btn-info:hover, 
+.btn-info.disabled:focus, 
+.btn-info[disabled]:focus, 
+fieldset[disabled] .btn-info:focus, 
+.btn-info.disabled:active, 
+.btn-info[disabled]:active, 
+fieldset[disabled] .btn-info:active, 
+.btn-info.disabled.active, 
+.btn-info[disabled].active, 
+fieldset[disabled] .btn-info.active { 
+  background-color: #0088CC; 
+  border-color: #0088CC; 
+} 
+ 
+.btn-info .badge { 
+  color: #0088CC; 
+  background-color: #ffffff; 
+}
+
+.btn-nav {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+

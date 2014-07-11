@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  airport: MyString
+  flighttime: MyString
+  datetime: MyString
+  ridetime: MyString
+  datetime: MyString
+
+two:
+  airport: MyString
+  flighttime: MyString
+  datetime: MyString
+  ridetime: MyString
+  datetime: MyString

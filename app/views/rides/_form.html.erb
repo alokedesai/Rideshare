@@ -1,0 +1,19 @@
+<div class="ride-form">
+	<%= form_for(@ride) do |f| %>
+		<div class="field">
+			<%=f.label :airport %>
+			<%=f.select :airport, [["To LAX", "To LAX"], ["From LAX", "From LAX"], ["To Ontario", "To Ontario"], ["From Ontario", "From Ontario"]] %>
+		</div>
+
+		<div class="field">
+			<%= f.label :flight_date %>
+			<%= f.datetime_select :date, :start_year=> Time.now.year, :end_year=> Time.now.year + 1, :ampm=> true, :minute_step=> 15 %>
+		</div>
+
+		<div class="field">
+				<%= f.label :shuttle_time %>
+				<%= f.time_select :ridetime, :ampm=> true, :minute_step=> 15 %>
+		</div>
+		<%= f.submit :class=> "btn btn-success" %>
+	<% end %>	
+</div>

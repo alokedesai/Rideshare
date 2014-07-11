@@ -1,0 +1,24 @@
+<h2>
+	<%= @airport_info[:airport] %>
+</h2>
+  
+  <% if @rides.blank? %>
+    There are currently no rides for this airport.
+  <% else %>
+  	<table class="table table-hover">
+  		<tr>
+  			<th>Flight Date</th>
+  			<th>Flight Time</th>
+  			<th>Shuttle Time</th>
+  			<th># People Attending</th>
+  		</tr>
+  	<% @rides.each do |ride| %>
+  		<tr>
+  			<td> <%= ride.flight_date %> </td>
+  			<td> <%= ride.flight_time %> </td>
+  			<td> <%= ride.flight_time %> </td>
+  			<td> <%= ride.users.count %> </td>
+  		</tr>
+  	<% end %>
+    </table>
+  <% end %>
