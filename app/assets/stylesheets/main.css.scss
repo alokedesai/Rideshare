@@ -1,3 +1,4 @@
+$input-border-focus: #62c462;
 @import "bootstrap";
 body {
   font-family: 'Open Sans', sans-serif;
@@ -68,4 +69,12 @@ fieldset[disabled] .btn-info.active {
   .row:hover{
     background-color: #e8e8e8;
   }
+
+  a{
+    text-decoration: none
+  }
+}
+
+.container-header{
+  margin-top: 10px;
 }
