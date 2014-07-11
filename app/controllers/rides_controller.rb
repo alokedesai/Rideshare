@@ -6,6 +6,7 @@ class RidesController < ApplicationController
   def create
     @ride = Ride.new(ride_params)
     if @ride.valid?
+      @ride.save
       redirect_to @ride
     else
       flash[:error] = @ride.errors.full_messages.join(', ')
@@ -44,7 +45,7 @@ class RidesController < ApplicationController
   def airport
     @airport_info = airport_helper(params[:id])
     redirect_to root_url unless @airport_info[:valid]
-    @rides = Ride.where("airport= ? AND date > ?", @airport_info[:airport], Time.now) 
+    @rides = Ride.where("airport= ? AND date > ?", @airport_info[:airport], Time.now)
   end
 
   private
@@ -82,6 +83,6 @@ class RidesController < ApplicationController
         {
           valid: false
         }
-      end  
+      end
     end
 end
