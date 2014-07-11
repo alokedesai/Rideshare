@@ -2,50 +2,50 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
-.btn-info { 
-  color: #ffffff; 
-  background-color: #0088CC; 
-  border-color: #0088CC; 
-} 
- 
-.btn-info:hover, 
-.btn-info:focus, 
-.btn-info:active, 
-.btn-info.active, 
-.open .dropdown-toggle.btn-info { 
-  color: #ffffff; 
-  background-color: #0099E6; 
-  border-color: #0088CC; 
-} 
- 
-.btn-info:active, 
-.btn-info.active, 
-.open .dropdown-toggle.btn-info { 
-  background-image: none; 
-} 
- 
-.btn-info.disabled, 
-.btn-info[disabled], 
-fieldset[disabled] .btn-info, 
-.btn-info.disabled:hover, 
-.btn-info[disabled]:hover, 
-fieldset[disabled] .btn-info:hover, 
-.btn-info.disabled:focus, 
-.btn-info[disabled]:focus, 
-fieldset[disabled] .btn-info:focus, 
-.btn-info.disabled:active, 
-.btn-info[disabled]:active, 
-fieldset[disabled] .btn-info:active, 
-.btn-info.disabled.active, 
-.btn-info[disabled].active, 
-fieldset[disabled] .btn-info.active { 
-  background-color: #0088CC; 
-  border-color: #0088CC; 
-} 
- 
-.btn-info .badge { 
-  color: #0088CC; 
-  background-color: #ffffff; 
+.btn-info {
+  color: #ffffff;
+  background-color: #0088CC;
+  border-color: #0088CC;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  color: #ffffff;
+  background-color: #0099E6;
+  border-color: #0088CC;
+}
+
+.btn-info:active,
+.btn-info.active,
+.open .dropdown-toggle.btn-info {
+  background-image: none;
+}
+
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #0088CC;
+  border-color: #0088CC;
+}
+
+.btn-info .badge {
+  color: #0088CC;
+  background-color: #ffffff;
 }
 
 .btn-nav {
@@ -53,3 +53,19 @@ fieldset[disabled] .btn-info.active {
   margin-right: 5px;
 }
 
+.airport-info{
+  .header{
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-bottom: 13px !important;
+  }
+  .row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C0C0C0;
+  }
+
+  .row:hover{
+    background-color: #e8e8e8;
+  }
+}
