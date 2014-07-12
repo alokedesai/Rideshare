@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140629005023) do
+ActiveRecord::Schema.define(version: 20140712053344) do
 
   create_table "rides", force: true do |t|
     t.string   "airport"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20140629005023) do
     t.time     "ridetime",   limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id"
   end
 
   create_table "rides_users", id: false, force: true do |t|
