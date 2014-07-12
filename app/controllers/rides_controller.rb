@@ -6,7 +6,9 @@ class RidesController < ApplicationController
   def create
     @ride = Ride.new(ride_params)
     if @ride.valid?
+      @ride.owner_id = current_user.id
       @ride.save
+      @ride.users << current_user
       redirect_to @ride
     else
       flash[:error] = @ride.errors.full_messages.join(', ')
