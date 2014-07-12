@@ -56,6 +56,7 @@ class RidesController < ApplicationController
     @airport_info = airport_helper(params[:id])
     redirect_to root_url unless @airport_info[:valid]
     @rides = Ride.where("airport= ? AND date > ?", @airport_info[:airport], Time.now)
+    @rides = @rides.sort{ |a,b| a.date <=> b.date }
   end
 
   private
