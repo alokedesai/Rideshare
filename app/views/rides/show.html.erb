@@ -5,10 +5,11 @@
 <b>Ride Time: </b> <%= @ride.shuttle_time %>
 
  <%= link_to "delete", @ride, :method => :delete,
-                                       :confirm => "You sure?" %>
+                                       :confirm => "You sure?" if @ride.owner_id == current_user.id%>
 
 <% if current_user %>
-<%= link_to "Join this ride", join_ride_path, :method=> :post unless @ride.users.exists?(current_user.id)%>
+<%= link_to "Join this ride", join_ride_path, :method=> :post if !@ride.users.exists?(current_user.id)%>
+<%= link_to "Leave this ride", leave_ride_path, :method=> :delete if @ride.users.exists?(current_user.id)%>
 <% else %>
 You must first login before joining this ride
 <% end %>

@@ -44,6 +44,14 @@ class RidesController < ApplicationController
     redirect_to ride
   end
 
+  def leave
+    ride = Ride.find(params[:id])
+    if current_user && ride.users.exists?(current_user)
+      ride.users.delete current_user
+    end
+    redirect_to ride
+  end
+
   def airport
     @airport_info = airport_helper(params[:id])
     redirect_to root_url unless @airport_info[:valid]
