@@ -21,20 +21,22 @@
 				</div>
       </div>
 			<% @rides.each do |ride| %>
-				<div class="row">
-					<div class="col-xs-3">
-						<%= ride.flight_date %>
-					</div>
-					<div class="col-xs-3">
-						<%= ride.flight_time %>
-					</div>
-					<div class="col-xs-3">
-						<%= ride.shuttle_time %>
-					</div>
-					<div class="col-xs-3">
-						<%= ride.users.count %>
-					</div>
-				</div>
+				<%= link_to(ride) do %>
+  				<div class="row">
+  					<div class="col-xs-3">
+  						<%= ride.flight_date %>
+  					</div>
+  					<div class="col-xs-3">
+  						<%= ride.flight_time %>
+  					</div>
+  					<div class="col-xs-3">
+  						<%= ride.shuttle_time %>
+  					</div>
+  					<div class="col-xs-3">
+  						<%= ride.users.count %>
+  					</div>
+  				</div>
+        <% end %>
 			<% end %>
 
     </div>
