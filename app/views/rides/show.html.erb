@@ -1,8 +1,8 @@
 <h1>Ride</h1>
-Airport: <%= @ride.airport %>
-Flight Date: <%= @ride.flight_date %> 
-Flight Time: <%= @ride.flight_time %>
-Ride Time <%= @ride.shuttle_time %>
+<b>Airport:</b> <%= @ride.airport %>
+<b>Flight Date:</b> <%= @ride.flight_date %> 
+<b>Flight Time:</b> <%= @ride.flight_time %>
+<b>Ride Time: </b> <%= @ride.shuttle_time %>
 
  <%= link_to "delete", @ride, :method => :delete,
                                        :confirm => "You sure?" %>
@@ -14,6 +14,9 @@ You must first login before joining this ride
 <% end %>
 
 <h1>Members</h1>
+<% if @ride.users.blank? %>
+	No one has joined this ride
+<% end %>
 <% @ride.users.each do |user| %>
 	<img src="<%= user.fbimage %>">
 <% end %>
