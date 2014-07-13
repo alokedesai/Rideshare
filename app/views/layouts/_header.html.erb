@@ -4,7 +4,7 @@
 	<% if current_user %>
 		<a class="btn btn-primary btn-nav" href="/signout" style="float:right">SIGN OUT</a>
 	<% else %>
-		<a class="btn btn-primary btn-nav" href="/auth/facebook" style="float:right">SIGN IN</a>
+		<%= link_to "SIGN IN", "/auth/facebook?origin=#{request.original_url}", {:class=> "btn btn-primary btn-nav", :style=> "float:right"} %>
 	<% end %>
 		<%= link_to "NEW RIDE", new_ride_path, {:class=> "btn btn-primary btn-nav", :style=> "float:right"} %>
 </div>
