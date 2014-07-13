@@ -1,15 +1,16 @@
 <h1>Ride</h1>
-<b>Airport:</b> <%= @ride.airport %>
-<b>Flight Date:</b> <%= @ride.flight_date %> 
-<b>Flight Time:</b> <%= @ride.flight_time %>
-<b>Ride Time: </b> <%= @ride.shuttle_time %>
-
- <%= link_to "delete", @ride, :method => :delete,
-                                       :confirm => "You sure?" if @ride.owner_id == current_user.id%>
+<div class="ride-info">
+	<b>Airport:</b> <%= @ride.airport %>
+	<b>Flight Date:</b> <%= @ride.flight_date %> 
+	<b>Flight Time:</b> <%= @ride.flight_time %>
+	<b>Ride Time: </b> <%= @ride.shuttle_time %>
+</div>
 
 <% if current_user %>
-<%= link_to "Join this ride", join_ride_path, :method=> :post if !@ride.users.exists?(current_user.id)%>
-<%= link_to "Leave this ride", leave_ride_path, :method=> :delete if @ride.users.exists?(current_user.id)%>
+<%= link_to "Join", join_ride_path, :method=> :post, :class=> "btn btn-default btn-sm" if !@ride.users.exists?(current_user.id) %>
+<%= link_to "Leave", leave_ride_path, :method=> :delete, :class=> "btn btn-default btn-sm" if @ride.users.exists?(current_user.id)%>
+ <%= link_to "Delete", @ride, :method => :delete,
+                                       :confirm => "You sure?", :class=> "btn btn-default btn-sm" if @ride.owner_id == current_user.id%>
 <% else %>
 You must first login before joining this ride
 <% end %>
@@ -19,9 +20,14 @@ You must first login before joining this ride
 	No one has joined this ride
 <% end %>
 <% @ride.users.each do |user| %>
-	<img src="<%= user.fbimage %>">
+	<div class="rider">
+		<img src="<%= user.fbimage %>">
+    <div class="rider-info">
+      <%= user.name %>
+    </div>
+	</div>
 <% end %>
 
-<div>
+<div class="fb-plugin">
 	<div class="fb-comments" data-href="http://rideshare.com/rides" data-numposts="5" data-colorscheme="light"></div>
 </div>
