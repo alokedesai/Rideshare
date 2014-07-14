@@ -1,5 +1,7 @@
 <div class="container container-header">
-	<h3 style="display: inline; font-weight: bold">5CRideshare</h3>
+	<%= link_to(root_url, {:class=>"logo"}) do %> 
+	<h3>5CRideshare</h3>
+	<% end %> 
 
 	<% if current_user %>
 		<a class="btn btn-primary btn-nav" href="/signout" style="float:right">SIGN OUT</a>
